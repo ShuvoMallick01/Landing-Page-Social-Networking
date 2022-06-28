@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  box-sizing: content-box;
 }
 
 body {
@@ -70,6 +69,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .btn-blue {
@@ -95,12 +95,8 @@ p {
 }
 
 /* ====== Header CSS Start ====== */
-.container {
-  background: red;
+.hero-area {
   background: linear-gradient(311.76deg, #d4e7fe -15.24%, #ffffff 78.85%);
-}
-.header-banner {
-  max-height: 746px;
 }
 
 .full-header {
@@ -108,7 +104,10 @@ p {
 }
 
 .logo-menu {
-  width: 50%;
+  /* width: 50%; */
+  display: flex;
+  align-items: center;
+  gap: 4rem;
 }
 
 .site-logo {
@@ -141,23 +140,21 @@ p {
   line-height: 14px;
 }
 
-.search-loginbtn {
+/* .search-loginbtn {
   display: flex;
   gap: 10px;
-}
+} */
 
 .searchbtn {
   /* gap: 20px; */
 }
 
-.search-box {
+.search-input {
   border: none;
-  border-bottom: 1px solid rgba(136, 136, 136, 0.452);
   outline: none;
-  width: 123px;
-  height: 50px;
-  border-radius: 14px;
-  margin-left: 5px;
+  padding: 7px 7px;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.452);
+  background: transparent;
 }
 
 hr {
@@ -179,12 +176,8 @@ hr {
   padding: 80px 0;
 }
 
-.banner-img {
-  width: 585px;
-}
-
-.banner-left {
-  width: 50%;
+.banner-right img {
+  width: 100%;
 }
 
 .btn-slim {
@@ -225,7 +218,7 @@ hr {
 }
 
 .feature-one-leftside {
-  width: 50%;
+  /* width: 50%; */
 }
 
 .feature-one-leftside h3 {
@@ -247,37 +240,16 @@ hr {
 }
 
 .feature-one-rightimages {
-  width: 50%;
-  height: 576px;
-  /* background-color: #217bf4; */
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 30px;
-  column-gap: 30px;
-  justify-content: space-evenly;
-  /* flex-direction: right; */
+  gap: 20px;
 }
 
-.feature-one-img01 {
-  width: 270px;
-  height: 368px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.feature-one-img02 {
-  width: 265px;
-  height: 238px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.feature-one-img03 {
-  width: 265px;
-  height: 238px;
-  object-fit: cover;
-  border-radius: 10px;
+.image-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Feature 01: Whats Netboks CSS End */
@@ -287,6 +259,9 @@ hr {
   /* background-color: aqua; */
   /* padding-top: 50px; */
   padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .ft-two-card-rating {
@@ -294,7 +269,6 @@ hr {
   justify-content: center;
   background-color: white;
   max-width: 28%;
-  height: 340px;
   padding: 40px;
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -336,7 +310,7 @@ hr {
   justify-content: center;
   background-color: white;
   max-width: 28%;
-  height: 340px;
+  /* height: 340px; */
   padding: 40px;
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -369,7 +343,7 @@ hr {
   justify-content: center;
   background-color: white;
   max-width: 38%;
-  height: 340px;
+  /* height: 340px; */
   padding: 40px;
   /* border-radius: 10px; */
 }
@@ -466,7 +440,7 @@ hr {
   padding: 10px;
   margin: auto;
   background-color: #217cf41c;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   border: none;
   width: 474px;
   height: 72px;
@@ -474,6 +448,7 @@ hr {
   color: #ffffff;
   font-weight: 600;
   font-size: 12px;
+  display: flex;
 }
 
 .btn-style {
@@ -514,6 +489,7 @@ padding-right: 10px; */
   padding-bottom: 100px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .ft-four-member-card {
@@ -711,23 +687,61 @@ padding-right: 10px; */
 }
 /* <!-- Footer END --> */
 
-/* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .feature-gellery {
+}
+
+@media (max-width: 767.98px) {
+  .ft-two-card-rating,
+  .ft-two-card-awwards,
+  .feature-two-rightside {
+    max-width: 100%;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+
+  .banner-right {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .ft-four-member-card {
+    width: 100%;
+  }
+
+  .ft-five-rightside {
+    display: none;
+  }
+
+  .ft-six {
+    padding: 20px;
+  }
+
+  .ft-six-news-card {
     width: 100%;
   }
 }
 
-/* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .feature-gellery {
-    width: 48%;
+@media (max-width: 991.98px) {
+  .feature-one-rightimages {
+    /* flex-direction: column; */
+    display: none;
+  }
+
+  .ft-three-card {
+    width: 100%;
+  }
+
+  .full-header {
+    flex-direction: column;
   }
 }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .feature-gellery {
-    width: 48%;
-  }
+@media (max-width: 1199.98px) {
+}
+
+@media (max-width: 1399.98px) {
 }
