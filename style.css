@@ -737,6 +737,7 @@ padding-right: 10px; */
 
   .full-header {
     flex-direction: column;
+    /* color: #282a35; */
   }
 }
 
